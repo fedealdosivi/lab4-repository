@@ -1,0 +1,44 @@
+<html>
+<head>
+	<script>
+	function calcular(hipotenusa,lado)
+	{
+		var hip=hipotenusa.value;
+		var cat=lado.value;
+		var hipotenuasaCuadrado;
+		var ladoCuadrado;
+		var resultado=0;
+
+       if(cat<hip)
+       {
+		hipotenuasaCuadrado=hip*hip;
+		ladoCuadrado=cat*cat;
+		resultado=hipotenuasaCuadrado-ladoCuadrado;
+		alert("El valor del otro cateto es "+resultado);
+	   }
+	   else
+	   {
+	   	if(cat>=hip)
+	   	{
+	   		alert("Error, debe ingresar un lado menor que la hipotenusa");
+	   	}
+	   }
+	}
+	</script>
+</head>
+
+<body>
+<table BORDER=1>
+<form>
+<tr>
+	<td>Ingrese Hipotenusa:
+	<input type="text" name="cHip" size=5>
+    </td>
+    <td>Ingrese Cateto:<input type="text" name="cLado" size=5></td>
+<td><input type="button" value="Aceptar" size=5 onClick=calcular(this.form.cHip,this.form.cLado);></td>
+</tr>
+</table>
+</form>
+
+</body>
+</html>

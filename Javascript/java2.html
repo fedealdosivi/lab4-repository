@@ -1,0 +1,56 @@
+<html>
+<head>
+	<meta CHARSET="UTF8">
+	<script>
+	function pasa(secre,caja)
+	{
+		var temporal;
+		temporal=secre.value;
+		caja.value=temporal;
+	}
+
+	function ver(cedad)
+	{
+		var edad=parseint(cedad.value);
+
+		if(edad<=18)
+		{
+			alert("no tienes 18 no podes entrar");
+		}
+		else
+		{
+			alert("Bienvenido a la pagina");
+		}
+	}
+	</script>
+</head>
+
+<body>
+
+<center><table BORDER=1 WIDTH="50%">
+	<form>
+		<tr>
+			<td>
+		Contraseña:
+	       </td>
+	       <td>
+		<input type="password" name="secre" size="5" onKeyUp=pasa(secre,caja);>
+           </td>
+		<BR>
+			<td>
+			<input type="text" name="caja" size="5">
+		    </td>
+		</tr>
+
+	</form>
+</table></center>
+
+<BR>
+	
+Edad:<input type="text" name="cedad" size="3" onBlur=Ver(cedad);>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title>Guia02_03</title>
+	<script SRC="Guia02_03.js"></script>
+</head>
+<body>
+	<form>
+	<h1>Personas</h1>
+	<h3>Ingresar Datos</h3>
+	Nombre:<input type="text" name="txbNombre" id="idNombre" size=20;><br>
+	Edad:<input type="text" name="txbEdad" id="idEdad" size=3;><br>
+	Sexo:<input type="text" name="txbSexo" id="idSexo" size=1;><br><br>
+	<input type="button" value="Cargar ser vivo" onclick=cargarpersona(txbNombre,txbEdad,txbSexo);><br><br>
+	<input type="button" value="mostrar datos en tabla" onclick="mostrar()";><br><br>
+	</form>
+
+	<span id="tablaDatos">
+	</span>
+</body>
+</html>

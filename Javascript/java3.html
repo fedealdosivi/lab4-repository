@@ -1,0 +1,107 @@
+<html>
+<head>
+	<script>
+	function espe(cespe)
+	{
+		var tipo=cespe.value;
+		switch(tipo){
+			case "humano":
+			alert("Eres un gil");
+			break;
+
+			case "planta":
+			alert("eres vegetal");
+			break;
+
+			case "animal":
+			alert("Eres un animal");
+			break;
+
+			default:
+			alert("Especie desconocida");
+		}
+	}
+
+	function confirmar()
+	{
+		var respuesta=confirm("pulsa un boton");
+		if(respuesta==true)
+		{
+			alert("aceptaste");
+		}
+		else
+		{
+			alert("noooooo");
+		}
+	}
+
+	function opt(valor)
+	{
+		if (valor==1)
+		 {
+		 	alert("vas a uno");
+		 };
+
+		 if (valor==2) 
+		 {
+		 	alert("vas a dos");
+
+		 };
+	}
+
+	function oprimir(valor)
+	{
+		var cadena;
+		switch(valor)
+		{
+			case 1:
+			cadena="uno"; break;
+
+			case 2:
+			cadena="dos"; break:
+
+			case 3:
+			cadena="tres"; break;
+
+			case 4:
+			cadena="cuatro"; break;
+
+		}
+
+		alert("Vinculo:"+cadena);
+	}
+
+	</script>
+</head>
+
+<body>
+<table BORDER=1>
+<tr>
+<form>
+Ingrese tipo:<input type="text" name="cespe" size=20 onChange=espe(cespe);>
+</form>
+</tr>
+<tr>
+<td>
+	<form>
+		<input type="button" value="confirmarrrrr" onClick=confirmar();>
+	
+</td>
+</tr>
+<tr>
+<td><a href="java1.html" onMouseOver=opt("1");>ir a uno</a></td>
+<td><a href="java2.html" onMouseOver=opt("2");>ir a dos</a></td></tr>
+
+
+<tr>
+	<td>Ejemplo de switch</td>
+	<td><a href="java1.html" onMouseOver=oprimir("1");></a>uno</td>
+	<td><a href="java2.html" onMouseOver=oprimir("2");></a>dos</td>
+	<td><a href="java3.html" onMouseOver=oprimir("3");></a>tres</td>
+	<td><a href="java3.html" onMouseOver=oprimir("4");></a>cuatro</td>
+
+</tr>
+</form>
+</table>
+</body>
+</html>

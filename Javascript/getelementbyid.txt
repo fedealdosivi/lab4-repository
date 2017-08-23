@@ -1,0 +1,6 @@
+<!--var zanguenga= document.getElementByName"nombre").value/id-->
+		<!--var zanguenga=document.getElementById("nombre").value-->
+		<!--width(document)
+		{
+			var nombre=getElementById("nombre").value
+		}-->

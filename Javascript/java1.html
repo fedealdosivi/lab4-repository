@@ -1,0 +1,45 @@
+<html>
+<header>
+	<script>
+	function hola()
+	{
+		alert("hola amiguitos");
+	}
+
+	function valor()
+	{
+		var nombre;
+		nombre=prompt("Introduce nombre:","");
+		alert("hola "+ nombre);
+	}
+
+	function muestra(cnombre)
+	{
+		var nombre=cnombre.value;
+		alert("Eres "+nombre);
+		cnombre.value="";
+		cnombre.focus();
+	}
+
+	</script>
+
+	<title>Yoquese</title>
+</header>
+
+
+<body ><!--onLoad valor();-->
+<form>
+<center><table BORDER=1 WIDHT="50%" <caption>Bienvenidos<caption>
+	<tr>
+		<td>Nombre</td>
+		<td><input type "text" name="cnombre" size="20"></td>
+    </tr>
+	
+	<tr>
+	<td><input type="button" value="ver" onClick=muestra(this.form.cnombre);></td>
+    </tr>
+
+</table></center>
+</form>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<html>
+
+<head>
+	<script>
+
+	var nombres=new Array(3);
+	var edades=new Array(3);
+	var sexo=new Array(3);
+
+	function cargar(nombre, edad, sexo)
+	{
+    alert("hola");
+      var f=nombres.count;
+      nombres[f]=nombre.value;
+      var v=edad.value;
+      edades[f]=parseInt(v);      
+      sexo[f]=sexo.value;
+   
+    alert("se cargo "+ nombres[f] + edades[f]+ sexo[f]);
+	}
+
+  function cargarmucho()
+  {
+    nombres[0]="maria";
+    edades[0]=12;
+    sexo[0]="f";
+    nombres[1]="jose";
+    edades[1]=15;
+    sexo[1]="m";
+
+    alert("se cargo todo, el primer nombre es:"+ nombres[0]);
+  }
+
+  function printearTablaPrueba()
+  {
+    var table = document.createElement('table');
+    for (var i = 1; i < 4; i++)
+    {
+    var tr = document.createElement('tr');   
+
+    var td1 = document.createElement('td');
+    var td2 = document.createElement('td');
+
+    var text1 = document.createTextNode('Text1');
+    var text2 = document.createTextNode('Text2');
+
+    td1.appendChild(text1);
+    td2.appendChild(text2);
+    tr.appendChild(td1);
+    tr.appendChild(td2);
+
+    table.appendChild(tr);
+   }
+document.body.appendChild(table);
+  }
+
+
+
+	function crearTabla()
+	{
+
+		var table = document.createElement('table');
+      for (var i = 0, i < nombres.count, i++)
+      {
+        alert("hola");
+        var tr = document.createElement('tr');   
+
+         var td1 = document.createElement('td');
+         var td2 = document.createElement('td');
+         var td3 = document.createElement('td');
+
+        var text1 =document.createElement(nombres[i]);
+        var text2 =document.createElement(edades[i]);
+        var text3 =document.createElement(sexo[i]);
+
+
+
+        td1.appendChild(text1);
+        td2.appendChild(text2);
+        td3.appendChild(text3);
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+
+    table.appendChild(tr);
+}
+     document.body.appendChild(table);
+
+	}
+
+
+
+
+	</script>
+
+</head>
+
+<body>
+<!--
+
+	abajo de los td document create para probar si anda la tabla
+	    var text1 = document.createTextNode('Text1');
+        var text2 = document.createTextNode('Text2');
+        var text3 = document.createTextNode('Text3');
+-->
+<form>
+
+	Nombre:<input type="text" name="nombre" size=20><BR>
+	Edad:  <input type="text" name="edad" size=20><BR>
+	Sexo:  <input type="text" name="sexo" size=20> <BR>
+  <!--<input type="button" value="aceptar muchos" size=20 onClick=cargarmucho()<BR>-->
+	<input type="button" value="aceptar" size=20 onClick=cargar(nombre,edad,sexo)><BR>
+	<input type="button" value="mostrar" size=20 onClick=crearTabla()><BR>
+  <input type="button" value="mostrartabla" size=20 onClick=printearTablaPrueba()><BR>
+
+</form>
+
+</body>
+</html>

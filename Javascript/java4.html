@@ -1,0 +1,50 @@
+<html>
+<head>
+<script>
+var banco=100;
+var num_secreto=0;
+
+function general()
+{
+	num_secreto=Math.random()*3;
+	num_secreto=Math.round(num_secreto);
+	if(num_secreto==0)
+	{
+		num_secreto=3;
+	}
+}
+
+function juego(valor,c)
+{
+	if (num_secreto==valor)
+	 {
+	 	alert("ganaste");
+	 	banco+=100;
+	 	general();
+	 }
+	 else
+	 {
+	 	alert("perdiste");
+	 	banco-=50;
+	 }
+	 c.value=banco;
+}
+
+</script>
+</head>
+
+<body onLoad=general();>
+
+	apuesta:
+
+	<form>
+		Uno<input type="radio" name="r1" onClick=juego(1,this.form.caja);><BR>
+		Dos<input type="radio" name="r1" onClick=juego(2,this.form.caja);><BR>
+		Tres<input type="radio" name"r1" onClick=juego(3,this.form.caja);><BR> 
+
+<input type="text" name="caja" size="20" value="100">
+	</form>
+
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<html>
+<head>
+	<script>
+
+     
+     var nombre= new Array();
+     var edad= new Array();
+     var sexo= new Array();
+
+     function agregar(n,e,s)
+     {
+
+     	var i=nombre.count
+     	nombre[i]=n.value;
+     	edad[i]=e.value;
+     	sexo[i]=s.value;
+     	
+     	alert("hola" + nombre[i]);
+     }
+
+	function crear()
+	{
+
+		var table = document.createElement('table');
+    for (var i = 0; i < 1; i++)
+    {
+    var tr = document.createElement('tr');   
+
+
+    var td1 = document.createElement('td');
+    var td2 = document.createElement('td');
+    var td3=document.createElement('td');
+
+    var text1 =document.createTextNode('text1');
+    var text2 =document.createTextNode('text2');
+    var text3=document.createTextNode('text3');
+
+    td1.appendChild(text1);
+    td2.appendChild(text2);
+    td3.appendChild(text3);
+
+    tr.appendChild(td1);
+    tr.appendChild(td2);
+    tr.appendChild(td3);
+
+    table.appendChild(tr);
+}
+document.body.appendChild(table);
+	}
+
+	  function mostrarTodito()
+     {
+        
+        for(var i=0;i<nombre.count;i++)
+        {
+        	alert(nombre[i] + edad[i] + sexo[i]);
+        	i++;
+        }
+     }
+	
+
+
+	</script>
+
+</head>
+
+<body>
+	<form>
+		Nombre<input type="text" name="n" size=20><BR>
+		Edad<input type="text" name="e" size=20><BR>
+		Sexo<input type="text" name="s" size=20><BR>
+		<input type="button" value="aceptar" size=200 onClick=agregar(n,e,s)><BR>
+		<input type="button" value="mostrar" size=20 onClick=crear()><BR>
+		<input type="button" value="Mostrar todo lo cargado" onClick=mostrarTodito()><BR> 
+
+	</form>
+
+
+</body>
+</html>
